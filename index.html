@@ -3,599 +3,503 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SkillBridge | Academia - Industry Collaboration</title>
+    <title>Academia–Industry Collaboration Portal</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <!-- NAVBAR -->
-    <nav class="navbar">
-        <div class="logo" onclick="showPage('home')">SkillBridge</div>
+<!-- ================= HEADER ================= -->
+<header class="header">
+    <div class="logo">
+        <span>AI</span> SkillBridge
+    </div>
 
-        <div class="nav-links">
-            <button onclick="showPage('home')">Home</button>
-            <button onclick="showPage('student')">Student</button>
-            <button onclick="showPage('skills')">Skill Gap</button>
-            <button onclick="showPage('internships')">Internships</button>
-            <button onclick="showPage('industry')">Industry</button>
-            <button onclick="showPage('academia')">Academia</button>
-        </div>
+    <nav>
+        <a href="#dashboard">Dashboard</a>
+        <a href="#assessment">Assessment</a>
+        <a href="#opportunities">Opportunities</a>
+        <a href="#learning">Learning</a>
+        <a href="#portfolio">Portfolio</a>
     </nav>
 
+    <button class="profile-btn">Student ▾</button>
+</header>
 
-    <!-- HOME -->
-    <section id="home" class="page active">
 
-        <div class="hero">
-            <div class="hero-content">
-                <p class="tag">SMART SKILL & CAREER PLATFORM</p>
-
-                <h1>
-                    Connecting
-                    <span>Skills</span>
-                    With Opportunities
-                </h1>
-
-                <p class="hero-text">
-                    SkillBridge connects students, academic institutions
-                    and industries for skill mapping, internships and
-                    placement opportunities.
-                </p>
-
-                <div class="hero-buttons">
-                    <button class="primary-btn" onclick="showPage('student')">
-                        Explore Student Dashboard
-                    </button>
-
-                    <button class="secondary-btn" onclick="showPage('industry')">
-                        Industry Portal
-                    </button>
-                </div>
-            </div>
-
-            <div class="hero-card">
-                <h3>SkillBridge</h3>
-                <p>Student → Academia → Industry</p>
-
-                <div class="connection">
-                    <div>🎓</div>
-                    <span>↔</span>
-                    <div>🏫</div>
-                    <span>↔</span>
-                    <div>🏢</div>
-                </div>
-            </div>
-        </div>
-
-
-        <div class="features">
-            <div class="feature-card">
-                <div class="icon">🎯</div>
-                <h3>Skill Mapping</h3>
-                <p>Map student skills with current industry requirements.</p>
-            </div>
-
-            <div class="feature-card">
-                <div class="icon">📊</div>
-                <h3>Skill Gap Analysis</h3>
-                <p>Identify missing skills and understand what to learn.</p>
-            </div>
-
-            <div class="feature-card">
-                <div class="icon">💼</div>
-                <h3>Internships</h3>
-                <p>Find internship opportunities based on your skills.</p>
-            </div>
-
-            <div class="feature-card">
-                <div class="icon">🤝</div>
-                <h3>Industry Collaboration</h3>
-                <p>Connect academic institutions with industries.</p>
-            </div>
-        </div>
-
-    </section>
-
-
-    <!-- STUDENT -->
-    <section id="student" class="page">
-
-        <div class="page-header">
-            <p class="tag">STUDENT DASHBOARD</p>
-            <h1>Welcome, Vaishnavi 👋</h1>
-            <p>Track your skills, opportunities and career progress.</p>
-        </div>
-
-        <div class="stats-grid">
-
-            <div class="stat-card">
-                <h3>Career Goal</h3>
-                <strong>Software Developer</strong>
-            </div>
-
-            <div class="stat-card">
-                <h3>Skills</h3>
-                <strong>4</strong>
-            </div>
-
-            <div class="stat-card">
-                <h3>Matched Opportunities</h3>
-                <strong>12</strong>
-            </div>
-
-        </div>
-
-
-        <div class="two-column">
-
-            <div class="panel">
-                <h2>My Skills</h2>
-
-                <div class="skill-item">
-                    <span>Python</span>
-                    <div class="progress">
-                        <div style="width:85%"></div>
-                    </div>
-                </div>
-
-                <div class="skill-item">
-                    <span>C Programming</span>
-                    <div class="progress">
-                        <div style="width:75%"></div>
-                    </div>
-                </div>
-
-                <div class="skill-item">
-                    <span>SQL</span>
-                    <div class="progress">
-                        <div style="width:70%"></div>
-                    </div>
-                </div>
-
-                <div class="skill-item">
-                    <span>Data Structures</span>
-                    <div class="progress">
-                        <div style="width:65%"></div>
-                    </div>
-                </div>
-
-                <button class="primary-btn" onclick="showPage('skills')">
-                    Analyze Skill Gap
-                </button>
-            </div>
-
-
-            <div class="panel">
-                <h2>Recommended Opportunities</h2>
-
-                <div class="opportunity">
-                    <div>
-                        <h3>Python Developer Intern</h3>
-                        <p>Technology Company</p>
-                    </div>
-
-                    <span class="match">85% Match</span>
-                </div>
-
-                <div class="opportunity">
-                    <div>
-                        <h3>Data Analyst Intern</h3>
-                        <p>Analytics Company</p>
-                    </div>
-
-                    <span class="match">72% Match</span>
-                </div>
-
-                <button class="secondary-btn"
-                        onclick="showPage('internships')">
-                    View All Internships
-                </button>
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- SKILL GAP -->
-    <section id="skills" class="page">
-
-        <div class="page-header">
-            <p class="tag">AI-BASED SKILL ANALYSIS</p>
-            <h1>Skill Gap Analysis</h1>
-            <p>Compare your current skills with industry requirements.</p>
-        </div>
-
-        <div class="two-column">
-
-            <div class="panel">
-                <h2>Your Current Skills</h2>
-
-                <ul class="check-list">
-                    <li>✓ Python</li>
-                    <li>✓ SQL</li>
-                    <li>✓ Data Structures</li>
-                    <li>✓ C Programming</li>
-                </ul>
-            </div>
-
-            <div class="panel">
-                <h2>Industry Requirements</h2>
-
-                <ul class="check-list">
-                    <li>✓ Python</li>
-                    <li>✓ SQL</li>
-                    <li>✓ Data Structures</li>
-                    <li>⚠ Machine Learning</li>
-                </ul>
-            </div>
-
-        </div>
-
-
-        <div class="gap-box">
-            <h2>Skill Gap Identified</h2>
-
-            <div class="gap-skill">
-                <span>Machine Learning</span>
-                <strong>Missing</strong>
-            </div>
-
-            <p>
-                Learning Machine Learning can improve your compatibility
-                with several technology internships and placements.
-            </p>
-        </div>
-
-
-        <div class="panel">
-            <h2>Recommended Skills</h2>
-
-            <div class="recommendations">
-                <div>Machine Learning</div>
-                <div>Cloud Computing</div>
-                <div>Data Analytics</div>
-            </div>
-        </div>
-
-    </section>
-
-
-    <!-- INTERNSHIPS -->
-    <section id="internships" class="page">
-
-        <div class="page-header">
-            <p class="tag">OPPORTUNITIES</p>
-            <h1>Internship Opportunities</h1>
-            <p>Opportunities matched with your skills.</p>
-        </div>
-
-
-        <div class="internship-list">
-
-            <div class="internship-card">
-                <div>
-                    <h2>Python Developer Intern</h2>
-                    <p>Technology Company</p>
-                    <p>📍 Pune | ⏱ 3 Months</p>
-                </div>
-
-                <div>
-                    <span class="match">85% Match</span>
-                    <button class="primary-btn"
-                            onclick="applyOpportunity('Python Developer Intern')">
-                        Apply
-                    </button>
-                </div>
-            </div>
-
-
-            <div class="internship-card">
-                <div>
-                    <h2>Data Analyst Intern</h2>
-                    <p>Analytics Company</p>
-                    <p>📍 Pune | ⏱ 6 Months</p>
-                </div>
-
-                <div>
-                    <span class="match">72% Match</span>
-                    <button class="primary-btn"
-                            onclick="applyOpportunity('Data Analyst Intern')">
-                        Apply
-                    </button>
-                </div>
-            </div>
-
-
-            <div class="internship-card">
-                <div>
-                    <h2>Software Engineering Intern</h2>
-                    <p>Software Company</p>
-                    <p>📍 Bengaluru | ⏱ 6 Months</p>
-                </div>
-
-                <div>
-                    <span class="match">68% Match</span>
-                    <button class="primary-btn"
-                            onclick="applyOpportunity('Software Engineering Intern')">
-                        Apply
-                    </button>
-                </div>
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- INDUSTRY -->
-    <section id="industry" class="page">
-
-        <div class="page-header">
-            <p class="tag">INDUSTRY PORTAL</p>
-            <h1>Industry Dashboard</h1>
-            <p>Find skilled students and post internship opportunities.</p>
-        </div>
-
-
-        <div class="stats-grid">
-
-            <div class="stat-card">
-                <h3>Active Opportunities</h3>
-                <strong>18</strong>
-            </div>
-
-            <div class="stat-card">
-                <h3>Matched Students</h3>
-                <strong>245</strong>
-            </div>
-
-            <div class="stat-card">
-                <h3>College Partners</h3>
-                <strong>12</strong>
-            </div>
-
-        </div>
-
-
-        <div class="two-column">
-
-            <div class="panel">
-
-                <h2>Post Internship</h2>
-
-                <label>Opportunity Name</label>
-                <input id="opportunityName"
-                       type="text"
-                       placeholder="e.g. Python Developer Intern">
-
-                <label>Required Skills</label>
-                <input id="requiredSkills"
-                       type="text"
-                       placeholder="Python, SQL, DSA">
-
-                <label>Duration</label>
-                <input id="duration"
-                       type="text"
-                       placeholder="3 Months">
-
-                <button class="primary-btn"
-                        onclick="postOpportunity()">
-                    Post Opportunity
-                </button>
-
-            </div>
-
-
-            <div class="panel">
-
-                <h2>Top Matching Students</h2>
-
-                <div class="student-match">
-                    <div>
-                        <h3>Student A</h3>
-                        <p>Python • SQL • DSA</p>
-                    </div>
-
-                    <span class="match">92%</span>
-                </div>
-
-                <div class="student-match">
-                    <div>
-                        <h3>Student B</h3>
-                        <p>Python • C • SQL</p>
-                    </div>
-
-                    <span class="match">86%</span>
-                </div>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- ACADEMIA -->
-    <section id="academia" class="page">
-
-        <div class="page-header">
-            <p class="tag">ACADEMIA PORTAL</p>
-
-            <h1>Academia Dashboard</h1>
-
-            <p>
-                Monitor student skills, industry requirements
-                and collaboration opportunities.
-            </p>
-        </div>
-
-
-        <!-- ACADEMIA STATS -->
-        <div class="stats-grid">
-
-            <div class="stat-card">
-                <h3>Students</h3>
-                <strong>500</strong>
-                <p>Registered students</p>
-            </div>
-
-            <div class="stat-card">
-                <h3>Industry Partners</h3>
-                <strong>25</strong>
-                <p>Connected organizations</p>
-            </div>
-
-            <div class="stat-card">
-                <h3>Internships</h3>
-                <strong>78</strong>
-                <p>Available opportunities</p>
-            </div>
-
-        </div>
-
-
-        <!-- ACADEMIA CONTENT -->
-        <div class="two-column">
-
-            <!-- STUDENT SKILL GAPS -->
-            <div class="panel">
-
-                <h2>Top Student Skill Gaps</h2>
-
-                <div class="skill-item">
-                    <div class="skill-label">
-                        <span>Machine Learning</span>
-                        <strong>68%</strong>
-                    </div>
-
-                    <div class="progress">
-                        <div style="width:68%"></div>
-                    </div>
-                </div>
-
-
-                <div class="skill-item">
-                    <div class="skill-label">
-                        <span>Cloud Computing</span>
-                        <strong>54%</strong>
-                    </div>
-
-                    <div class="progress">
-                        <div style="width:54%"></div>
-                    </div>
-                </div>
-
-
-                <div class="skill-item">
-                    <div class="skill-label">
-                        <span>Data Analytics</span>
-                        <strong>42%</strong>
-                    </div>
-
-                    <div class="progress">
-                        <div style="width:42%"></div>
-                    </div>
-                </div>
-
-            </div>
-
-
-            <!-- INDUSTRY REQUIREMENTS -->
-            <div class="panel">
-
-                <h2>Industry Skill Requirements</h2>
-
-                <div class="skill-item">
-                    <div class="skill-label">
-                        <span>Python</span>
-                        <strong>82%</strong>
-                    </div>
-
-                    <div class="progress">
-                        <div style="width:82%"></div>
-                    </div>
-                </div>
-
-
-                <div class="skill-item">
-                    <div class="skill-label">
-                        <span>Data Structures</span>
-                        <strong>76%</strong>
-                    </div>
-
-                    <div class="progress">
-                        <div style="width:76%"></div>
-                    </div>
-                </div>
-
-
-                <div class="skill-item">
-                    <div class="skill-label">
-                        <span>SQL</span>
-                        <strong>71%</strong>
-                    </div>
-
-                    <div class="progress">
-                        <div style="width:71%"></div>
-                    </div>
-                </div>
-
-
-                <div class="skill-item">
-                    <div class="skill-label">
-                        <span>Cloud Computing</span>
-                        <strong>65%</strong>
-                    </div>
-
-                    <div class="progress">
-                        <div style="width:65%"></div>
-                    </div>
-                </div>
-
-            </div>
-
-        </div>
-
-
-        <!-- COLLABORATION -->
-        <div class="panel collaboration">
-
-            <h2>Academia–Industry Collaboration</h2>
-
-            <p>
-                The platform helps academic institutions identify
-                skill gaps and collaborate with industries to create
-                relevant internship and placement opportunities.
-            </p>
-
-            <button class="primary-btn"
-                    onclick="showPage('internships')">
-                Explore Opportunities
-            </button>
-
-        </div>
-
-    </section>
-
-
-    <!-- FOOTER -->
-    <footer>
-        <h2>SkillBridge</h2>
+<!-- ================= HERO ================= -->
+<section class="hero">
+    <div class="hero-content">
+        <h1>Bridge the Gap Between <span>Academia & Industry</span></h1>
 
         <p>
-            Connecting Students • Academia • Industry
+            Assess your skills, identify skill gaps, discover learning
+            opportunities, internships and jobs aligned with your career goals.
         </p>
 
-        <p class="footer-small">
-            Prototype for Academia–Industry Collaboration
-        </p>
-    </footer>
+        <div class="hero-buttons">
+            <button onclick="scrollToSection('assessment')" class="primary-btn">
+                Take Skill Assessment
+            </button>
+
+            <button onclick="scrollToSection('opportunities')" class="secondary-btn">
+                Explore Opportunities
+            </button>
+        </div>
+    </div>
+
+    <div class="hero-card">
+        <div class="circle">
+            78%
+        </div>
+        <h3>Industry Readiness</h3>
+        <p>Your current skill compatibility</p>
+    </div>
+</section>
 
 
-    <!-- JAVASCRIPT -->
-    <script src="script.js"></script>
+<!-- ================= DASHBOARD ================= -->
+<section id="dashboard" class="section">
+
+    <div class="section-title">
+        <p>STUDENT DASHBOARD</p>
+        <h2>Your Career Progress</h2>
+    </div>
+
+    <div class="stats-grid">
+
+        <div class="stat-card">
+            <div class="icon blue">🎯</div>
+            <h3>78%</h3>
+            <p>Industry Readiness</p>
+        </div>
+
+        <div class="stat-card">
+            <div class="icon orange">📚</div>
+            <h3>6</h3>
+            <p>Skills Completed</p>
+        </div>
+
+        <div class="stat-card">
+            <div class="icon green">🏆</div>
+            <h3>4</h3>
+            <p>Certifications</p>
+        </div>
+
+        <div class="stat-card">
+            <div class="icon purple">💼</div>
+            <h3>12</h3>
+            <p>Matched Opportunities</p>
+        </div>
+
+    </div>
+
+
+    <!-- SKILL PROFILE -->
+    <div class="dashboard-grid">
+
+        <div class="panel">
+            <div class="panel-header">
+                <h3>My Skill Profile</h3>
+                <span>Updated Today</span>
+            </div>
+
+            <div class="skill">
+                <div>
+                    <span>Python</span>
+                    <strong>85%</strong>
+                </div>
+                <div class="progress">
+                    <div class="progress-bar blue-bar" style="width:85%"></div>
+                </div>
+            </div>
+
+            <div class="skill">
+                <div>
+                    <span>SQL</span>
+                    <strong>52%</strong>
+                </div>
+                <div class="progress">
+                    <div class="progress-bar orange-bar" style="width:52%"></div>
+                </div>
+            </div>
+
+            <div class="skill">
+                <div>
+                    <span>Java</span>
+                    <strong>72%</strong>
+                </div>
+                <div class="progress">
+                    <div class="progress-bar green-bar" style="width:72%"></div>
+                </div>
+            </div>
+
+            <div class="skill">
+                <div>
+                    <span>Communication</span>
+                    <strong>68%</strong>
+                </div>
+                <div class="progress">
+                    <div class="progress-bar purple-bar" style="width:68%"></div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- SKILL GAPS -->
+        <div class="panel">
+            <div class="panel-header">
+                <h3>Skill Gap Analysis</h3>
+                <span class="danger-text">3 gaps found</span>
+            </div>
+
+            <div class="gap-item">
+                <div>
+                    <strong>SQL</strong>
+                    <small>Required: 75%</small>
+                </div>
+                <span class="gap-badge">23% Gap</span>
+            </div>
+
+            <div class="gap-item">
+                <div>
+                    <strong>Power BI</strong>
+                    <small>Required: 65%</small>
+                </div>
+                <span class="gap-badge">35% Gap</span>
+            </div>
+
+            <div class="gap-item">
+                <div>
+                    <strong>Statistics</strong>
+                    <small>Required: 70%</small>
+                </div>
+                <span class="gap-badge">28% Gap</span>
+            </div>
+
+            <button onclick="scrollToSection('learning')" class="small-btn">
+                View Learning Roadmap →
+            </button>
+        </div>
+
+    </div>
+</section>
+
+
+<!-- ================= ASSESSMENT ================= -->
+<section id="assessment" class="section light-section">
+
+    <div class="section-title">
+        <p>SKILL ASSESSMENT</p>
+        <h2>Evaluate Your Skills</h2>
+    </div>
+
+    <div class="assessment-card">
+
+        <div class="question">
+            <span>Question 1 of 5</span>
+
+            <h3>
+                Which SQL command is used to retrieve data from a database?
+            </h3>
+
+            <label>
+                <input type="radio" name="q1" value="correct">
+                SELECT
+            </label>
+
+            <label>
+                <input type="radio" name="q1" value="wrong">
+                INSERT
+            </label>
+
+            <label>
+                <input type="radio" name="q1" value="wrong">
+                UPDATE
+            </label>
+
+            <label>
+                <input type="radio" name="q1" value="wrong">
+                DELETE
+            </label>
+        </div>
+
+        <button onclick="submitAssessment()" class="primary-btn">
+            Submit Assessment
+        </button>
+
+        <div id="assessment-result"></div>
+
+    </div>
+</section>
+
+
+<!-- ================= OPPORTUNITIES ================= -->
+<section id="opportunities" class="section">
+
+    <div class="section-title">
+        <p>OPPORTUNITIES</p>
+        <h2>Recommended For You</h2>
+    </div>
+
+    <div class="filter-bar">
+        <input type="text" id="searchBox"
+               placeholder="Search jobs, internships or skills..."
+               onkeyup="searchOpportunities()">
+
+        <select id="typeFilter" onchange="filterOpportunities()">
+            <option value="all">All Opportunities</option>
+            <option value="internship">Internships</option>
+            <option value="job">Jobs</option>
+            <option value="training">Training</option>
+        </select>
+    </div>
+
+
+    <div class="opportunity-grid" id="opportunityList">
+
+        <div class="opportunity-card"
+             data-type="internship"
+             data-search="python data analyst internship">
+
+            <div class="company-logo">T</div>
+
+            <div class="opportunity-content">
+                <span class="tag internship-tag">INTERNSHIP</span>
+
+                <h3>Data Analyst Intern</h3>
+                <p>TechNova Solutions</p>
+
+                <div class="requirements">
+                    <span>Python</span>
+                    <span>SQL</span>
+                    <span>Excel</span>
+                </div>
+
+                <div class="opportunity-footer">
+                    <strong>87% Match</strong>
+                    <button onclick="applyOpportunity(this)">Apply Now</button>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="opportunity-card"
+             data-type="job"
+             data-search="java software developer job">
+
+            <div class="company-logo purple-logo">I</div>
+
+            <div class="opportunity-content">
+                <span class="tag job-tag">JOB</span>
+
+                <h3>Junior Java Developer</h3>
+                <p>InnovateTech Pvt. Ltd.</p>
+
+                <div class="requirements">
+                    <span>Java</span>
+                    <span>Spring</span>
+                    <span>SQL</span>
+                </div>
+
+                <div class="opportunity-footer">
+                    <strong>78% Match</strong>
+                    <button onclick="applyOpportunity(this)">Apply Now</button>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="opportunity-card"
+             data-type="training"
+             data-search="power bi data analytics training">
+
+            <div class="company-logo green-logo">D</div>
+
+            <div class="opportunity-content">
+                <span class="tag training-tag">TRAINING</span>
+
+                <h3>Power BI Certification</h3>
+                <p>DataSkills Academy</p>
+
+                <div class="requirements">
+                    <span>Power BI</span>
+                    <span>Analytics</span>
+                </div>
+
+                <div class="opportunity-footer">
+                    <strong>Recommended</strong>
+                    <button onclick="applyOpportunity(this)">Enroll</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+
+<!-- ================= LEARNING ROADMAP ================= -->
+<section id="learning" class="section light-section">
+
+    <div class="section-title">
+        <p>PERSONALIZED LEARNING</p>
+        <h2>Your Career Roadmap</h2>
+    </div>
+
+    <div class="roadmap">
+
+        <div class="roadmap-item completed">
+            <div class="roadmap-number">✓</div>
+            <div>
+                <h3>Python Fundamentals</h3>
+                <p>Completed • Skill Level: 85%</p>
+            </div>
+        </div>
+
+        <div class="roadmap-line"></div>
+
+        <div class="roadmap-item active">
+            <div class="roadmap-number">2</div>
+            <div>
+                <h3>SQL for Data Analysis</h3>
+                <p>Recommended • 12 hours</p>
+                <button class="small-btn">Start Learning</button>
+            </div>
+        </div>
+
+        <div class="roadmap-line"></div>
+
+        <div class="roadmap-item">
+            <div class="roadmap-number">3</div>
+            <div>
+                <h3>Power BI</h3>
+                <p>Recommended • 15 hours</p>
+            </div>
+        </div>
+
+        <div class="roadmap-line"></div>
+
+        <div class="roadmap-item">
+            <div class="roadmap-number">4</div>
+            <div>
+                <h3>Data Analyst Internship</h3>
+                <p>Target • 80%+ skill compatibility</p>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+
+<!-- ================= PORTFOLIO ================= -->
+<section id="portfolio" class="section">
+
+    <div class="section-title">
+        <p>DIGITAL PORTFOLIO</p>
+        <h2>Your Verified Profile</h2>
+    </div>
+
+    <div class="portfolio-card">
+
+        <div class="profile-section">
+            <div class="avatar">AS</div>
+
+            <div>
+                <h2>Alex Student</h2>
+                <p>Computer Science Student</p>
+                <span class="verified">✓ Profile Verified</span>
+            </div>
+        </div>
+
+        <div class="portfolio-stats">
+
+            <div>
+                <strong>8</strong>
+                <span>Skills</span>
+            </div>
+
+            <div>
+                <strong>4</strong>
+                <span>Certificates</span>
+            </div>
+
+            <div>
+                <strong>3</strong>
+                <span>Projects</span>
+            </div>
+
+            <div>
+                <strong>1</strong>
+                <span>Internship</span>
+            </div>
+
+        </div>
+
+        <div class="portfolio-skills">
+            <h3>Verified Skills</h3>
+
+            <span>Python ✓</span>
+            <span>Java ✓</span>
+            <span>SQL ✓</span>
+            <span>Data Analysis ✓</span>
+            <span>Communication ✓</span>
+        </div>
+
+    </div>
+</section>
+
+
+<!-- ================= INDUSTRY SECTION ================= -->
+<section class="industry-section">
+
+    <div class="section-title white-title">
+        <p>FOR INDUSTRIES</p>
+        <h2>Connect With Industry-Ready Talent</h2>
+    </div>
+
+    <div class="industry-grid">
+
+        <div>
+            <h3>Post Opportunities</h3>
+            <p>
+                Publish internships, jobs, projects, apprenticeships
+                and training programs.
+            </p>
+        </div>
+
+        <div>
+            <h3>Find Skilled Candidates</h3>
+            <p>
+                Discover students based on skills, qualifications
+                and career interests.
+            </p>
+        </div>
+
+        <div>
+            <h3>Build Academia Partnerships</h3>
+            <p>
+                Conduct workshops, mentorships, guest lectures
+                and collaborative projects.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= FOOTER ================= -->
+<footer>
+    <div>
+        <h3>AI SkillBridge</h3>
+        <p>Connecting Students • Academia • Industry</p>
+    </div>
+
+    <p>© 2026 AI SkillBridge. All Rights Reserved.</p>
+</footer>
+
+
+<script src="script.js"></script>
 
 </body>
 </html>
