@@ -1,88 +1,126 @@
 // ===============================
-// PAGE NAVIGATION
+// Smooth Scrolling
 // ===============================
 
-function showPage(pageId) {
-
-    const pages = document.querySelectorAll(".page");
-
-    pages.forEach(function(page) {
-        page.classList.remove("active");
-    });
-
-    const selectedPage = document.getElementById(pageId);
-
-    if (selectedPage) {
-        selectedPage.classList.add("active");
-    }
-
-    window.scrollTo({
-        top: 0,
+function scrollToSection(id) {
+    document.getElementById(id).scrollIntoView({
         behavior: "smooth"
     });
 }
 
 
 // ===============================
-// INTERNSHIP APPLICATION
+// Skill Assessment
 // ===============================
 
-function applyOpportunity(opportunityName) {
+function submitAssessment() {
 
-    alert(
-        "Application submitted successfully!\n\n" +
-        "Opportunity: " + opportunityName +
-        "\n\n" +
-        "Your profile has been shared with the organization."
+    const selected = document.querySelector(
+        'input[name="q1"]:checked'
     );
-}
 
+    const result = document.getElementById("assessment-result");
 
-// ===============================
-// INDUSTRY - POST OPPORTUNITY
-// ===============================
-
-function postOpportunity() {
-
-    const opportunityName =
-        document.getElementById("opportunityName").value;
-
-    const requiredSkills =
-        document.getElementById("requiredSkills").value;
-
-    const duration =
-        document.getElementById("duration").value;
-
-
-    if (opportunityName === "" ||
-        requiredSkills === "" ||
-        duration === "") {
-
-        alert("Please fill all the fields.");
-
+    if (!selected) {
+        result.style.color = "#dc2626";
+        result.innerHTML = "Please select an answer.";
         return;
     }
 
-
-    alert(
-        "Opportunity created successfully!\n\n" +
-        "Opportunity: " + opportunityName +
-        "\n" +
-        "Required Skills: " + requiredSkills +
-        "\n" +
-        "Duration: " + duration +
-        "\n\n" +
-        "The system will find students whose skills match these requirements."
-    );
+    if (selected.value === "correct") {
+        result.style.color = "#16a34a";
+        result.innerHTML =
+            "✓ Correct! Your SQL assessment score has improved.";
+    } else {
+        result.style.color = "#dc2626";
+        result.innerHTML =
+            "✗ Incorrect. Review the SQL fundamentals module.";
+    }
 }
 
 
 // ===============================
-// START WEBSITE
+// Apply / Enroll
 // ===============================
 
-document.addEventListener("DOMContentLoaded", function() {
+function applyOpportunity(button) {
 
-    showPage("home");
+    button.innerText = "Applied ✓";
+    button.style.background = "#16a34a";
+    button.disabled = true;
 
-});
+    alert("Your application has been submitted successfully!");
+}
+
+
+// ===============================
+// Opportunity Search
+// ===============================
+
+function searchOpportunities() {
+
+    const searchValue =
+        document.getElementById("searchBox")
+        .value
+        .toLowerCase();
+
+    const cards =
+        document.querySelectorAll(".opportunity-card");
+
+    cards.forEach(card => {
+
+        const text =
+            card.dataset.search.toLowerCase();
+
+        if (text.includes(searchValue)) {
+            card.style.display = "block";
+        } else {
+            card.style.display = "none";
+        }
+
+    });
+}
+
+
+// ===============================
+// Opportunity Filter
+// ===============================
+
+function filterOpportunities() {
+
+    const filter =
+        document.getElementById("typeFilter").value;
+
+    const cards =
+        document.querySelectorAll(".opportunity-card");
+
+    cards.forEach(card => {
+
+        const type = card.dataset.type;
+
+        if (filter === "all" || type === filter) {
+            card.style.display = "block";
+        } else {
+            card.style.display = "none";
+        }
+
+    });
+}
+
+
+// ===============================
+// Profile Notification
+// ===============================
+
+document.querySelector(".profile-btn")
+    .addEventListener("click", function () {
+
+        alert(
+            "Student Profile\n\n" +
+            "Name: Alex Student\n" +
+            "Industry Readiness: 78%\n" +
+            "Skills: 8\n" +
+            "Certifications: 4"
+        );
+
+    });
