@@ -1,25 +1,21 @@
-/* =================================
-   PAGE NAVIGATION
-================================= */
+// ===============================
+// PAGE NAVIGATION
+// ===============================
 
 function showPage(pageId) {
 
-    // Get all pages
     const pages = document.querySelectorAll(".page");
 
-    // Hide all pages
     pages.forEach(function(page) {
         page.classList.remove("active");
     });
 
-    // Show selected page
     const selectedPage = document.getElementById(pageId);
 
     if (selectedPage) {
         selectedPage.classList.add("active");
     }
 
-    // Scroll to top
     window.scrollTo({
         top: 0,
         behavior: "smooth"
@@ -27,38 +23,63 @@ function showPage(pageId) {
 }
 
 
-/* =================================
-   APPLY BUTTON
-================================= */
+// ===============================
+// INTERNSHIP APPLICATION
+// ===============================
 
 function applyOpportunity(opportunityName) {
 
     alert(
         "Application submitted successfully!\n\n" +
         "Opportunity: " + opportunityName +
-        "\n\nYour profile has been shared with the organization."
+        "\n\n" +
+        "Your profile has been shared with the organization."
     );
-
 }
 
 
-/* =================================
-   POST OPPORTUNITY
-================================= */
+// ===============================
+// INDUSTRY - POST OPPORTUNITY
+// ===============================
 
 function postOpportunity() {
 
+    const opportunityName =
+        document.getElementById("opportunityName").value;
+
+    const requiredSkills =
+        document.getElementById("requiredSkills").value;
+
+    const duration =
+        document.getElementById("duration").value;
+
+
+    if (opportunityName === "" ||
+        requiredSkills === "" ||
+        duration === "") {
+
+        alert("Please fill all the fields.");
+
+        return;
+    }
+
+
     alert(
         "Opportunity created successfully!\n\n" +
-        "The system will now find students whose skills match your requirements."
+        "Opportunity: " + opportunityName +
+        "\n" +
+        "Required Skills: " + requiredSkills +
+        "\n" +
+        "Duration: " + duration +
+        "\n\n" +
+        "The system will find students whose skills match these requirements."
     );
-
 }
 
 
-/* =================================
-   INITIAL PAGE
-================================= */
+// ===============================
+// START WEBSITE
+// ===============================
 
 document.addEventListener("DOMContentLoaded", function() {
 
